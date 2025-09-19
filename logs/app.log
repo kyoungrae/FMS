@@ -1273,3 +1273,289 @@ Caused by: java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCas
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
 	... 22 more
+2025-09-19T17:37:13.433+09:00 INFO  1550 --- [][restartedMain] FileManagementSystemApplication:50 - Starting FileManagementSystemApplication using Java 19.0.2 with PID 1550 (/Users/ikyoungtae/Documents/coding/FMS/target/classes started by ikyoungtae in /Users/ikyoungtae/Documents/coding/FMS)
+2025-09-19T17:37:13.435+09:00 DEBUG 1550 --- [][restartedMain] FileManagementSystemApplication:51 - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-09-19T17:37:13.435+09:00 INFO  1550 --- [][restartedMain] FileManagementSystemApplication:659 - The following 1 profile is active: "local"
+2025-09-19T17:37:13.452+09:00 INFO  1550 --- [][restartedMain] DevToolsPropertyDefaultsPostProcessor:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-19T17:37:13.452+09:00 INFO  1550 --- [][restartedMain] DevToolsPropertyDefaultsPostProcessor:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-19T17:37:13.752+09:00 INFO  1550 --- [][restartedMain] RepositoryConfigurationDelegate:139 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-19T17:37:13.869+09:00 INFO  1550 --- [][restartedMain] RepositoryConfigurationDelegate:208 - Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+2025-09-19T17:37:13.904+09:00 DEBUG 1550 --- [][restartedMain] LogFactory:109 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-09-19T17:37:14.105+09:00 INFO  1550 --- [][restartedMain] TomcatWebServer:108 - Tomcat initialized with port 8082 (http)
+2025-09-19T17:37:14.109+09:00 INFO  1550 --- [][restartedMain] Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8082"]
+2025-09-19T17:37:14.110+09:00 INFO  1550 --- [][restartedMain] StandardService:173 - Starting service [Tomcat]
+2025-09-19T17:37:14.110+09:00 INFO  1550 --- [][restartedMain] StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-09-19T17:37:14.122+09:00 INFO  1550 --- [][restartedMain] [/]:173 - Initializing Spring embedded WebApplicationContext
+2025-09-19T17:37:14.122+09:00 INFO  1550 --- [][restartedMain] ServletWebServerApplicationContext:296 - Root WebApplicationContext: initialization completed in 670 ms
+2025-09-19T17:37:14.205+09:00 DEBUG 1550 --- [][restartedMain] JwtAuthenticationFilter:240 - Filter 'jwtAuthenticationFilter' configured for use
+2025-09-19T17:37:14.244+09:00 INFO  1550 --- [][restartedMain] LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-19T17:37:14.255+09:00 INFO  1550 --- [][restartedMain] Version:44 - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-09-19T17:37:14.262+09:00 INFO  1550 --- [][restartedMain] RegionFactoryInitiator:50 - HHH000026: Second-level cache disabled
+2025-09-19T17:37:14.319+09:00 INFO  1550 --- [][restartedMain] SpringPersistenceUnitInfo:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-19T17:37:14.326+09:00 INFO  1550 --- [][restartedMain] HikariDataSource:110 - HikariPool-1 - Starting...
+2025-09-19T17:37:14.375+09:00 INFO  1550 --- [][restartedMain] HikariPool:565 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2574cce9
+2025-09-19T17:37:14.376+09:00 INFO  1550 --- [][restartedMain] HikariDataSource:123 - HikariPool-1 - Start completed.
+2025-09-19T17:37:14.384+09:00 WARN  1550 --- [][restartedMain] deprecation:152 - HHH90000025: MariaDB103Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-19T17:37:14.384+09:00 WARN  1550 --- [][restartedMain] deprecation:100 - HHH90000026: MariaDB103Dialect has been deprecated; use org.hibernate.dialect.MariaDBDialect instead
+2025-09-19T17:37:14.608+09:00 INFO  1550 --- [][restartedMain] JtaPlatformInitiator:58 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-19T17:37:14.609+09:00 INFO  1550 --- [][restartedMain] LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-19T17:37:14.708+09:00 WARN  1550 --- [][restartedMain] AnnotationConfigServletWebServerApplicationContext:624 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileManagerController' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'fileManagerService' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerService.class]: Failed to instantiate [com.fms.file.FileManagerService]: Constructor threw exception
+2025-09-19T17:37:14.708+09:00 INFO  1550 --- [][restartedMain] LocalContainerEntityManagerFactoryBean:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-19T17:37:14.709+09:00 INFO  1550 --- [][restartedMain] HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2025-09-19T17:37:14.741+09:00 INFO  1550 --- [][restartedMain] HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+2025-09-19T17:37:14.742+09:00 INFO  1550 --- [][restartedMain] StandardService:173 - Stopping service [Tomcat]
+2025-09-19T17:37:14.746+09:00 INFO  1550 --- [][restartedMain] ConditionEvaluationReportLogger:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-19T17:37:14.751+09:00 ERROR 1550 --- [][restartedMain] SpringApplication:839 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileManagerController' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'fileManagerService' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerService.class]: Failed to instantiate [com.fms.file.FileManagerService]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) [spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) [spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) [spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) [spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) [spring-boot-3.2.0.jar:3.2.0]
+	at com.FileManagementSystemApplication.main(FileManagementSystemApplication.java:11) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.2.0.jar:3.2.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileManagerService' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerService.class]: Failed to instantiate [com.fms.file.FileManagerService]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:322) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:310) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 22 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fms.file.FileManagerService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:319) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:310) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 22 more
+Caused by: java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "unit" is null
+	at com.fms.file.FileProcessManager.fileSizeDefinition(FileProcessManager.java:52) ~[classes/:?]
+	at com.fms.file.FileProcessManager.<init>(FileProcessManager.java:34) ~[classes/:?]
+	at com.fms.file.FileManagerService.<init>(FileManagerService.java:24) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:319) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:310) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 22 more
+2025-09-19T17:39:04.629+09:00 INFO  1728 --- [][restartedMain] FileManagementSystemApplication:50 - Starting FileManagementSystemApplication using Java 19.0.2 with PID 1728 (/Users/ikyoungtae/Documents/coding/FMS/target/classes started by ikyoungtae in /Users/ikyoungtae/Documents/coding/FMS)
+2025-09-19T17:39:04.632+09:00 DEBUG 1728 --- [][restartedMain] FileManagementSystemApplication:51 - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-09-19T17:39:04.632+09:00 INFO  1728 --- [][restartedMain] FileManagementSystemApplication:659 - The following 1 profile is active: "local"
+2025-09-19T17:39:04.646+09:00 INFO  1728 --- [][restartedMain] DevToolsPropertyDefaultsPostProcessor:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-19T17:39:04.646+09:00 INFO  1728 --- [][restartedMain] DevToolsPropertyDefaultsPostProcessor:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-19T17:39:04.935+09:00 INFO  1728 --- [][restartedMain] RepositoryConfigurationDelegate:139 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-19T17:39:05.047+09:00 INFO  1728 --- [][restartedMain] RepositoryConfigurationDelegate:208 - Finished Spring Data repository scanning in 109 ms. Found 1 JPA repository interface.
+2025-09-19T17:39:05.080+09:00 DEBUG 1728 --- [][restartedMain] LogFactory:109 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-09-19T17:39:05.286+09:00 INFO  1728 --- [][restartedMain] TomcatWebServer:108 - Tomcat initialized with port 8082 (http)
+2025-09-19T17:39:05.290+09:00 INFO  1728 --- [][restartedMain] Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8082"]
+2025-09-19T17:39:05.291+09:00 INFO  1728 --- [][restartedMain] StandardService:173 - Starting service [Tomcat]
+2025-09-19T17:39:05.291+09:00 INFO  1728 --- [][restartedMain] StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-09-19T17:39:05.302+09:00 INFO  1728 --- [][restartedMain] [/]:173 - Initializing Spring embedded WebApplicationContext
+2025-09-19T17:39:05.303+09:00 INFO  1728 --- [][restartedMain] ServletWebServerApplicationContext:296 - Root WebApplicationContext: initialization completed in 657 ms
+2025-09-19T17:39:05.391+09:00 DEBUG 1728 --- [][restartedMain] JwtAuthenticationFilter:240 - Filter 'jwtAuthenticationFilter' configured for use
+2025-09-19T17:39:05.432+09:00 INFO  1728 --- [][restartedMain] LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-19T17:39:05.443+09:00 INFO  1728 --- [][restartedMain] Version:44 - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-09-19T17:39:05.451+09:00 INFO  1728 --- [][restartedMain] RegionFactoryInitiator:50 - HHH000026: Second-level cache disabled
+2025-09-19T17:39:05.505+09:00 INFO  1728 --- [][restartedMain] SpringPersistenceUnitInfo:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-19T17:39:05.513+09:00 INFO  1728 --- [][restartedMain] HikariDataSource:110 - HikariPool-1 - Starting...
+2025-09-19T17:39:05.568+09:00 INFO  1728 --- [][restartedMain] HikariPool:565 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6ba36941
+2025-09-19T17:39:05.568+09:00 INFO  1728 --- [][restartedMain] HikariDataSource:123 - HikariPool-1 - Start completed.
+2025-09-19T17:39:05.575+09:00 WARN  1728 --- [][restartedMain] deprecation:152 - HHH90000025: MariaDB103Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-19T17:39:05.575+09:00 WARN  1728 --- [][restartedMain] deprecation:100 - HHH90000026: MariaDB103Dialect has been deprecated; use org.hibernate.dialect.MariaDBDialect instead
+2025-09-19T17:39:05.796+09:00 INFO  1728 --- [][restartedMain] JtaPlatformInitiator:58 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-19T17:39:05.798+09:00 INFO  1728 --- [][restartedMain] LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-19T17:39:05.899+09:00 WARN  1728 --- [][restartedMain] AnnotationConfigServletWebServerApplicationContext:624 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileManagerController' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'fileManagerService' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerService.class]: Failed to instantiate [com.fms.file.FileManagerService]: Constructor threw exception
+2025-09-19T17:39:05.899+09:00 INFO  1728 --- [][restartedMain] LocalContainerEntityManagerFactoryBean:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-19T17:39:05.900+09:00 INFO  1728 --- [][restartedMain] HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2025-09-19T17:39:05.929+09:00 INFO  1728 --- [][restartedMain] HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+2025-09-19T17:39:05.930+09:00 INFO  1728 --- [][restartedMain] StandardService:173 - Stopping service [Tomcat]
+2025-09-19T17:39:05.935+09:00 INFO  1728 --- [][restartedMain] ConditionEvaluationReportLogger:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-19T17:39:05.939+09:00 ERROR 1728 --- [][restartedMain] SpringApplication:839 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileManagerController' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'fileManagerService' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerService.class]: Failed to instantiate [com.fms.file.FileManagerService]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:802) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:241) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:946) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) [spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) [spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) [spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) [spring-boot-3.2.0.jar:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) [spring-boot-3.2.0.jar:3.2.0]
+	at com.FileManagementSystemApplication.main(FileManagementSystemApplication.java:11) [classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.2.0.jar:3.2.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileManagerService' defined in file [/Users/ikyoungtae/Documents/coding/FMS/target/classes/com/fms/file/FileManagerService.class]: Failed to instantiate [com.fms.file.FileManagerService]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:322) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:310) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 22 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.fms.file.FileManagerService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:319) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:310) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 22 more
+Caused by: java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "unit" is null
+	at com.fms.file.FileProcessManager.fileSizeDefinition(FileProcessManager.java:52) ~[classes/:?]
+	at com.fms.file.FileProcessManager.<init>(FileProcessManager.java:34) ~[classes/:?]
+	at com.fms.file.FileManagerService.<init>(FileManagerService.java:24) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:319) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:310) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1441) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1348) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911) ~[spring-beans-6.1.1.jar:6.1.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.1.1.jar:6.1.1]
+	... 22 more
+2025-09-19T17:40:18.843+09:00 INFO  1854 --- [][restartedMain] FileManagementSystemApplication:50 - Starting FileManagementSystemApplication using Java 19.0.2 with PID 1854 (/Users/ikyoungtae/Documents/coding/FMS/target/classes started by ikyoungtae in /Users/ikyoungtae/Documents/coding/FMS)
+2025-09-19T17:40:18.845+09:00 DEBUG 1854 --- [][restartedMain] FileManagementSystemApplication:51 - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-09-19T17:40:18.845+09:00 INFO  1854 --- [][restartedMain] FileManagementSystemApplication:659 - The following 1 profile is active: "local"
+2025-09-19T17:40:18.859+09:00 INFO  1854 --- [][restartedMain] DevToolsPropertyDefaultsPostProcessor:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-19T17:40:18.860+09:00 INFO  1854 --- [][restartedMain] DevToolsPropertyDefaultsPostProcessor:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-19T17:40:19.149+09:00 INFO  1854 --- [][restartedMain] RepositoryConfigurationDelegate:139 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-19T17:40:19.263+09:00 INFO  1854 --- [][restartedMain] RepositoryConfigurationDelegate:208 - Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interface.
+2025-09-19T17:40:19.295+09:00 DEBUG 1854 --- [][restartedMain] LogFactory:109 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2025-09-19T17:40:19.513+09:00 INFO  1854 --- [][restartedMain] TomcatWebServer:108 - Tomcat initialized with port 8082 (http)
+2025-09-19T17:40:19.517+09:00 INFO  1854 --- [][restartedMain] Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8082"]
+2025-09-19T17:40:19.518+09:00 INFO  1854 --- [][restartedMain] StandardService:173 - Starting service [Tomcat]
+2025-09-19T17:40:19.518+09:00 INFO  1854 --- [][restartedMain] StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-09-19T17:40:19.530+09:00 INFO  1854 --- [][restartedMain] [/]:173 - Initializing Spring embedded WebApplicationContext
+2025-09-19T17:40:19.530+09:00 INFO  1854 --- [][restartedMain] ServletWebServerApplicationContext:296 - Root WebApplicationContext: initialization completed in 670 ms
+2025-09-19T17:40:19.621+09:00 DEBUG 1854 --- [][restartedMain] JwtAuthenticationFilter:240 - Filter 'jwtAuthenticationFilter' configured for use
+2025-09-19T17:40:19.661+09:00 INFO  1854 --- [][restartedMain] LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-19T17:40:19.673+09:00 INFO  1854 --- [][restartedMain] Version:44 - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-09-19T17:40:19.681+09:00 INFO  1854 --- [][restartedMain] RegionFactoryInitiator:50 - HHH000026: Second-level cache disabled
+2025-09-19T17:40:19.735+09:00 INFO  1854 --- [][restartedMain] SpringPersistenceUnitInfo:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-19T17:40:19.743+09:00 INFO  1854 --- [][restartedMain] HikariDataSource:110 - HikariPool-1 - Starting...
+2025-09-19T17:40:19.812+09:00 INFO  1854 --- [][restartedMain] HikariPool:565 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@890cfd5
+2025-09-19T17:40:19.812+09:00 INFO  1854 --- [][restartedMain] HikariDataSource:123 - HikariPool-1 - Start completed.
+2025-09-19T17:40:19.823+09:00 WARN  1854 --- [][restartedMain] deprecation:152 - HHH90000025: MariaDB103Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-19T17:40:19.823+09:00 WARN  1854 --- [][restartedMain] deprecation:100 - HHH90000026: MariaDB103Dialect has been deprecated; use org.hibernate.dialect.MariaDBDialect instead
+2025-09-19T17:40:20.048+09:00 INFO  1854 --- [][restartedMain] JtaPlatformInitiator:58 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-19T17:40:20.051+09:00 INFO  1854 --- [][restartedMain] LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-19T17:40:20.187+09:00 WARN  1854 --- [][restartedMain] JpaBaseConfiguration$JpaWebConfiguration:232 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-19T17:40:20.321+09:00 INFO  1854 --- [][restartedMain] DefaultSecurityFilterChain:54 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8bc2599, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7aeb4359, org.springframework.security.web.context.SecurityContextHolderFilter@1816bb0, org.springframework.security.web.header.HeaderWriterFilter@525ff84d, org.springframework.web.filter.CorsFilter@41f75b5e, org.springframework.security.web.authentication.logout.LogoutFilter@4d2ce7b0, com.system.auth.jwt.JwtAuthenticationFilter@64f98c73, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7350a39e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f6b9c2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b33a176, org.springframework.security.web.session.SessionManagementFilter@1de9d1dd, org.springframework.security.web.access.ExceptionTranslationFilter@110edade, org.springframework.security.web.access.intercept.AuthorizationFilter@1ca4f07a]
+2025-09-19T17:40:20.374+09:00 WARN  1854 --- [][restartedMain] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:101 - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-09-19T17:40:20.426+09:00 WARN  1854 --- [][restartedMain] OptionalLiveReloadServer:62 - Unable to start LiveReload server
+2025-09-19T17:40:20.435+09:00 INFO  1854 --- [][restartedMain] Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8082"]
+2025-09-19T17:40:20.441+09:00 INFO  1854 --- [][restartedMain] TomcatWebServer:221 - Tomcat started on port 8082 (http) with context path ''
+2025-09-19T17:40:20.445+09:00 INFO  1854 --- [][restartedMain] FileManagementSystemApplication:56 - Started FileManagementSystemApplication in 1.697 seconds (process running for 2.025)
+2025-09-19T17:40:24.363+09:00 INFO  1854 --- [][http-nio-8082-exec-1] [/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-19T17:40:24.363+09:00 INFO  1854 --- [][http-nio-8082-exec-1] DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-09-19T17:40:24.364+09:00 INFO  1854 --- [][http-nio-8082-exec-1] DispatcherServlet:554 - Completed initialization in 1 ms
+2025-09-19T17:40:24.376+09:00 WARN  1854 --- [][http-nio-8082-exec-1] HandlerMappingIntrospector:454 - Cache miss for REQUEST dispatch to '/fms/fileManager/upload' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-09-19T17:40:24.425+09:00 DEBUG 1854 --- [][http-nio-8082-exec-1] DataSourceUtils:117 - Fetching JDBC Connection from DataSource
+2025-09-19T17:40:24.438+09:00 DEBUG 1854 --- [][http-nio-8082-exec-1] SELECT_USER_INFO:135 - ==>  Preparing: SELECT id, email, password, role, user_id, office_code, system_create_userid, system_create_date, system_update_date, system_update_userid, user_name, tel, address, address_detail, postal_code, uuid FROM COMMON_USER where email = ?
+2025-09-19T17:40:24.446+09:00 DEBUG 1854 --- [][http-nio-8082-exec-1] SELECT_USER_INFO:135 - ==> Parameters: go66go66@giens.co.kr(String)
+2025-09-19T17:40:24.460+09:00 DEBUG 1854 --- [][http-nio-8082-exec-1] SELECT_USER_INFO:135 - <==      Total: 1
+2025-09-19T17:40:24.463+09:00 WARN  1854 --- [][http-nio-8082-exec-1] HandlerMappingIntrospector:454 - Cache miss for REQUEST dispatch to '/fms/fileManager/upload' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-09-19T17:40:24.497+09:00 DEBUG 1854 --- [][http-nio-8082-exec-1] DataSourceUtils:117 - Fetching JDBC Connection from DataSource
+2025-09-19T17:40:24.498+09:00 DEBUG 1854 --- [][http-nio-8082-exec-1] COMMON_FILE_INSERT:135 - ==>  Preparing: INSERT INTO COMMON_FILE( uuid , temp_yn , system_create_date , system_create_userid ) VALUES( ? , ? , ? , ? )
+2025-09-19T17:40:24.499+09:00 DEBUG 1854 --- [][http-nio-8082-exec-1] COMMON_FILE_INSERT:135 - ==> Parameters: 7b27ac0e-32b1-441a-9441-8f105c0ddde3(String), 0(Integer), 2025-09-19 17:40:24.498(Timestamp), go66go66@giens.co.kr(String)
+2025-09-19T17:40:24.520+09:00 DEBUG 1854 --- [][http-nio-8082-exec-1] COMMON_FILE_INSERT:135 - <==    Updates: 1
