@@ -28,8 +28,9 @@ public class FileManagerController {
 //        fileManagerService.fileCreate(param);
 //    }
     @PostMapping("/upload")
-    public List<Map<String ,Object>> uploadFile(@RequestParam("folder_name") String folder_name, @RequestParam(value = "uuid", required = false) String uuid, @RequestParam("files") MultipartFile[] files) throws Exception {
-        List<Map<String ,Object>> map = fileManagerService.fileUpload(folder_name, uuid, files);
+//    public List<Map<String ,Object>> uploadFile(@RequestParam("folder_name") String folder_name, @RequestParam(value = "uuid", required = false) String uuid, @RequestParam("files") MultipartFile[] files) throws Exception {
+    public List<Map<String ,Object>> uploadFile(@RequestParam("folder_name") String folder_name,  String uuid, @RequestParam("files") MultipartFile[] files) throws Exception {
+        List<Map<String ,Object>> map = fileManagerService.fileUpload(folder_name, files);
         return map;
     }
 //    @PostMapping("/search")

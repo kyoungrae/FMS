@@ -13,6 +13,8 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,28 +36,32 @@ public class FileManagerService extends FileProcessManager {
 //
 //        createFile(folderName, fileName, fileContent, fileExtension);
 //    }
-    public List<Map<String ,Object>> fileUpload(String folder_name, String uuid, MultipartFile[] files)throws Exception{
+    public List<Map<String ,Object>> fileUpload(String folder_name, MultipartFile[] files)throws Exception{
         //NOTE : 인가 정보 확인
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         //NOTE : unique ID 생성
-        String uid = (uuid == null || uuid.isEmpty()) ? String.valueOf(UUID.randomUUID()) : uuid;
-
+        String uid =  String.valueOf(UUID.randomUUID());
         String userId = authentication.getName();
-
-        List<Map<String,Object>> result = uploadFile(folder_name,files);
-        for(Map<String, Object> list : result){
-            list.put("file_uuid",uid);
-            list.put("system_create_userid",userId);
+        try{
+            List<Map<String,Object>> result = uploadFile(folder_name,files);
+            for(Map<String, Object> list : result){
+                list.put("file_uuid",uid);
+                list.put("system_create_userid",userId);
+            }
+            if(!result.isEmpty()){
+                var commonFile = CommonFile.builder()
+                        .uuid(uid)
+                        .temp_yn(0) //NOTE : 파일 임시 저장, 사용자가 작성 취소 하거나, 화면을 나갈 경우 삭제하기 위한 flag
+                        .system_create_userid(userId)
+                        .build();
+                commonFileMapper.COMMON_FILE_INSERT(commonFile);
+                return result;
+            }else{
+                throw new Exception("File upload failed");
+            }
+        }catch(Exception e){
+            throw new Exception("File upload failed");
         }
-        if(uuid == null){
-            var commonFile = CommonFile.builder()
-                    .uuid(uid)
-                    .system_create_userid(userId)
-                    .build();
-            commonFileMapper.COMMON_FILE_INSERT(commonFile);
-        }
-
-        return result;
     }
 //    public void fileDownload(List<Map<String,Object>> params, HttpServletResponse response) throws Exception{
 //        for(Map<String ,Object> param : params){

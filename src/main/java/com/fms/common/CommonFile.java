@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.Arrays;
 
 @EqualsAndHashCode(callSuper = true)
@@ -30,6 +30,8 @@ public class CommonFile extends Common {
     @Id
 	private String uuid;
 
+    /***<pre> temp_yn : 임시파일 여부 </pre> */
+	private Integer temp_yn;
     /***<pre> system_create_date : 작성일 </pre> */
 	private Date system_create_date;
 
